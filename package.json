@@ -1,0 +1,26 @@
+{
+  "name": "@anchor/browser-mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "Cross-platform browser-history reader as MCP server. Reads Chrome/Brave/Edge/Arc/Firefox/Safari sqlite files directly. Mac/Win/Linux.",
+  "bin": { "anchor-browser-mcp": "dist/index.js" },
+  "main": "dist/index.js",
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx --watch src/index.ts",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.5.0"
+  },
+  "pnpm": { "onlyBuiltDependencies": ["better-sqlite3"] },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3"
+  }
+}
